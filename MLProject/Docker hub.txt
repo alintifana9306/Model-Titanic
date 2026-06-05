@@ -1,0 +1,1 @@
+https://hub.docker.com/repository/docker/alintifana/membangun-sistem-machine-learning-titanic-model
