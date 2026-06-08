@@ -1,28 +1,42 @@
-name: MLflow CI
+name: MLflow CI Pipeline
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   train:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      # 1. Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Setup Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
+      # 3. Install dependencies
       - name: Install dependencies
         run: |
-          pip install mlflow pandas scikit-learn numpy scipy
+          python -m pip install --upgrade pip
+          pip install mlflow pandas numpy scipy scikit-learn
 
+      # 4. Debug struktur folder (BIAR KELIHATAN ERROR PATH)
+      - name: Show directory structure
+        run: ls -R
+
+      # 5. Run MLflow training (INI INTI NYA)
       - name: Run MLflow Project
+        working-directory: MLProject
         run: mlflow run .
 
-      - name: Upload MLflow results
+      # 6. Upload hasil MLflow (biar muncul di GitHub Actions)
+      - name: Upload MLflow artifacts
         uses: actions/upload-artifact@v4
         with:
           name: mlruns
