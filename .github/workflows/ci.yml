@@ -24,5 +24,5 @@ jobs:
 
       - name: Run Training
         run: |
-          cd MLProject
-          python modelling.py
+          pip install mlflow
+          mlflow run MLProject
