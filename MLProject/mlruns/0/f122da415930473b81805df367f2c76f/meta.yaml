@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/projek%20akhir%20membangun%20sistem%20machine%20learning/Workflow-CI/MLProject/mlruns/0/f122da415930473b81805df367f2c76f/artifacts
+end_time: 1780922914255
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f122da415930473b81805df367f2c76f
+run_name: carefree-worm-783
+run_uuid: f122da415930473b81805df367f2c76f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780922885448
+status: 3
+tags: []
+user_id: acer

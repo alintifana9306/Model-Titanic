@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/projek%20akhir%20membangun%20sistem%20machine%20learning/Workflow-CI/MLProject/mlruns/0/686f0b19fd27427998c8d42e4f01d48a/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 686f0b19fd27427998c8d42e4f01d48a
+run_name: angry-fowl-549
+run_uuid: 686f0b19fd27427998c8d42e4f01d48a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780929804844
+status: 1
+tags: []
+user_id: acer

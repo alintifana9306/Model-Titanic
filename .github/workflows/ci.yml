@@ -1,9 +1,6 @@
-name: MLflow CI Pipeline
+name: MLflow CI
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   train:
@@ -18,16 +15,15 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Miniconda
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          auto-update-conda: true
-          python-version: 3.11
-
-      - name: Install MLflow
+      - name: Install dependencies
         run: |
-          pip install mlflow
+          pip install mlflow pandas scikit-learn numpy scipy
 
       - name: Run MLflow Project
-        run: |
-          mlflow run . --env-manager=conda
+        run: mlflow run .
+
+      - name: Upload MLflow results
+        uses: actions/upload-artifact@v4
+        with:
+          name: mlruns
+          path: mlruns/

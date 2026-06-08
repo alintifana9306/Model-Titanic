@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/projek%20akhir%20membangun%20sistem%20machine%20learning/Workflow-CI/MLProject/mlruns/0/5a7b955425a249b689994f03184a4a0c/artifacts
+end_time: 1780933670884
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5a7b955425a249b689994f03184a4a0c
+run_name: bemused-worm-353
+run_uuid: 5a7b955425a249b689994f03184a4a0c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780933670212
+status: 4
+tags: []
+user_id: acer

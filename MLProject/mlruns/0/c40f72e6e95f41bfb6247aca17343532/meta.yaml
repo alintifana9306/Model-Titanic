@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/projek%20akhir%20membangun%20sistem%20machine%20learning/Workflow-CI/MLProject/mlruns/0/c40f72e6e95f41bfb6247aca17343532/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c40f72e6e95f41bfb6247aca17343532
+run_name: melodic-donkey-167
+run_uuid: c40f72e6e95f41bfb6247aca17343532
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780927066770
+status: 1
+tags: []
+user_id: acer
