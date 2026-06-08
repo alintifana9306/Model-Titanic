@@ -31,9 +31,11 @@ jobs:
         run: ls -R
 
       # 5. Run MLflow training (INI INTI NYA)
-      - name: Run MLflow Project
-        working-directory: MLProject
-        run: mlflow run .
+      - - name: Run MLflow Project
+          working-directory: MLProject
+          env:
+            MLFLOW_ALLOW_FILE_STORE: "true"
+          run: mlflow run .
 
       # 6. Upload hasil MLflow (biar muncul di GitHub Actions)
       - name: Upload MLflow artifacts

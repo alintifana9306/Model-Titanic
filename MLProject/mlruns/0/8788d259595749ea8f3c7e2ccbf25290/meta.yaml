@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/projek%20akhir%20membangun%20sistem%20machine%20learning/Workflow-CI/MLProject/mlruns/0/8788d259595749ea8f3c7e2ccbf25290/artifacts
+end_time: 1780940089307
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8788d259595749ea8f3c7e2ccbf25290
+run_name: colorful-slug-71
+run_uuid: 8788d259595749ea8f3c7e2ccbf25290
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780940045368
+status: 3
+tags: []
+user_id: acer
