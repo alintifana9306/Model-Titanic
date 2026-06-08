@@ -13,27 +13,36 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v3
         with:
-          python-version: "3.11"
+          auto-activate-base: false
+          python-version: 3.11
 
-      - name: Install dependencies
+      - name: Initialize conda
+        shell: bash -l {0}
         run: |
-          python -m pip install --upgrade pip
-          pip install mlflow pandas numpy scipy scikit-learn
+          conda info
+          conda --version
+
+      - name: Install MLflow (base env)
+        shell: bash -l {0}
+        run: |
+          pip install mlflow
 
       - name: Show directory structure
         run: ls -R
 
-      - name: Run MLflow Project
+      - name: Run MLflow Project (WITH CONDA)
         working-directory: MLProject
+        shell: bash -l {0}
         env:
           MLFLOW_ALLOW_FILE_STORE: "true"
-        run: mlflow run .
+        run: |
+          mlflow run .
 
       - name: Upload MLflow artifacts
         uses: actions/upload-artifact@v4
         with:
           name: mlruns
-          path: mlruns/
+          path: MLProject/mlruns/
